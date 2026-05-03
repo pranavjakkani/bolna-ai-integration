@@ -10,6 +10,14 @@ This project receives Bolna webhook events and sends a Slack alert when a call r
 - Includes optional fallback to the Bolna execution API when the webhook payload is missing `duration` or `transcript`
 - Focused pytest coverage for completed and ignored events
 
+## Verified Outcome
+
+- End-to-end delivery was verified with a real completed Bolna call.
+- The Slack alert contained the required `id`, `agent_id`, `duration`, and `transcript` fields.
+- Proof screenshot: `docs/slack-alert-proof.png`
+
+![Slack Alert Proof](docs/slack-alert-proof.png)
+
 ## Requirements
 
 - Python 3.11+
@@ -60,6 +68,11 @@ https://your-ngrok-subdomain.ngrok.app/webhooks/bolna
 ```
 
 Bolna sends POST requests to that endpoint as call status updates happen. The assignment only posts to Slack when `status == "completed"`.
+
+## Notes
+
+- A Slack screenshot is included as proof of successful delivery because it demonstrates the assignment outcome directly.
+- Additional terminal or ngrok screenshots are not required for submission and would add little value compared with the Slack proof.
 
 ## Sample request
 
