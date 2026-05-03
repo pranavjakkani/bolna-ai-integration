@@ -89,7 +89,3 @@ curl -X POST http://localhost:8000/webhooks/bolna \
     }
   }'
 ```
-
-## Submission
-
-Zip the project directory and email it to `ie+submissions@bolna.ai`.
